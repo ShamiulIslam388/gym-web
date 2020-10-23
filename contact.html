@@ -8,66 +8,82 @@
     <title>Gym | Web</title>
 </head>
 <body>
-    <div class="container">
-        <div class="small-container">
-            <nav>
-                <div class="logo">
+    <div class="nav-container">
+        <div class="container">
+            <nav class="navbar">
+                <div id="navbar-logo">
                     <i class="fas fa-running"></i>GYM WEB
                 </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Project</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="resister.html">Resister</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About Project</a></li>
+                    <li><a href="gallery.html" class="nav-links">Gallery</a></li>
+                    <li><a href="resister.html" class="nav-links">Resister</a></li>
+                    <li><a href="login.html" class="nav-links">Login</a></li>
+                    <li><a href="contact.html" class="nav-links active-nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <hr>
-
-            <div class="main-content">
-                <div class="left-content">
-                    <h1>Contact Us</h1>
-                    <form>
-                        <label for="user">Your Name</label>
-                        <input type="text">
-                        <label for="email">Your Email</label>
-                        <input type="text">
-                        <label for="message">Your Message</label>
-                        <textarea></textarea>
-                        <button>Send Email</button>
-                    </form>
-                </div>
-                <div class="right-content">
-                    <h1>Latest Gym News</h1>
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="images/img-1.jpg" >
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe.</p>
-                            </div>
-                            <p class="date-com">September 23,2020(100) Comments</p>
+        </div>
+    </div><hr>
+    <div class="container">
+        <div class="main-content">
+            <div class="left-content">
+                <h1>Contact Us</h1>
+                <form>
+                    <label for="user">Your Name</label>
+                    <input type="text">
+                    <label for="email">Your Email</label>
+                    <input type="text">
+                    <label for="message">Your Message</label>
+                    <textarea></textarea>
+                    <button>Send Email</button>
+                </form>
+            </div>
+            <div class="right-content">
+                <h1>Latest Gym News</h1>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/img-1.jpg" >
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe.</p>
                         </div>
-                        <hr>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="images/img-2.jpg" >
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe..</p>
-                            </div>
-                            <p class="date-com">September 23,2020(100) Comments</p>
+                        <p class="date-com">September 23,2020(100) Comments</p>
+                    </div>
+                    <hr>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/img-2.jpg" >
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe..</p>
                         </div>
-                        <hr>
-                        <div class="col-3">
-                            <div class="card">
-                                <img src="images/img-3.jpg" >
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe.</p>
-                            </div>
-                            <p class="date-com">September 23,2020(100) Comments</p>
+                        <p class="date-com">September 23,2020(100) Comments</p>
+                    </div>
+                    <hr>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/img-3.jpg" >
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor modi deserunt necessitatibus atque, corporis quidem possimus libero quis harum? Vitae sequi eos error quasi saepe.</p>
                         </div>
+                        <p class="date-com">September 23,2020(100) Comments</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click',function(){
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
